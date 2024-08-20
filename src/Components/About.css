@@ -1,0 +1,69 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    width: 100%;
+    height: 100vh; /* Ensure it takes up the full height of the viewport */
+    box-sizing: border-box;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .about-text {
+    max-width: 50%;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.5em;
+    color: #E63946; /* Red color similar to the button */
+  }
+  
+  .about-text h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .about-text p {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  
+  .download-cv {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #E63946; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .download-cv:hover {
+    background-color: #d32f2f;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      max-width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  
+    .about-image {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,74 @@
+/* src/components/Skills.css */
+
+.skills {
+    padding: 20px;
+    background-color: transparent;
+  }
+  
+  .skills-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .skills-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .skill-item:hover {
+    background-color: #ddd;
+  }
+  
+  .skill-item.active {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+  }
+  
+  .skill-name {
+    font-size: 1.2rem;
+  }
+  
+  .skill-progress-bar-container {
+    text-align: center;
+  }
+  
+  .skill-progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .skill-progress {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+  }
+  
+  .skill-percentage {
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  

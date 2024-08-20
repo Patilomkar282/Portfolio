@@ -1,0 +1,79 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0; /* The navbar will stick to the top of the page */
+    color: inherit; /* Inherit color from .app */
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .brand-icon {
+    margin-right: 8px;
+  }
+  
+  .brand-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-item {
+    margin-left: 20px;
+  }
+  
+  .navbar-link {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-icon {
+    margin-right: 8px;
+  }
+  
+  .navbar-text {
+    font-size: 16px;
+  }
+  
+  .social-media {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icon {
+    color: inherit;
+    font-size: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  

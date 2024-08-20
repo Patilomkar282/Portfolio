@@ -1,0 +1,77 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 150px; /* Reduces length on both sides */
+    background-color: transparent; /* Makes the footer transparent */
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+    color: #6c757d;
+    font-weight: bold;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+  }
+  
+  .icon.linkedin:hover {
+    color: #0077b5;
+  }
+  
+  .icon.instagram:hover {
+    color: #e4405f;
+  }
+  
+  .icon.github:hover {
+    color: #333;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon.email {
+    color: #c0392b;
+  }
+  
+  .footer-divider {
+    width: 1px;
+    height: 40px;
+    background-color: #ccc;
+    margin: 0 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      padding: 20px;
+      margin: 0 20px; /* Adjusts margin for smaller screens */
+    }
+  
+    .footer-divider {
+      width: 80%;
+      height: 1px;
+      margin: 20px 0;
+    }
+  }
+  

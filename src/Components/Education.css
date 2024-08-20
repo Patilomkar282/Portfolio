@@ -1,0 +1,57 @@
+/* src/components/Education.css */
+
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: transparent;
+    margin: 20px 80px;
+  }
+  
+  .education-section {
+    flex: 1;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .star {
+    color: #f39c12;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  
+  .education-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .degree {
+    font-weight: bold;
+  }
+  
+  .institution {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .year {
+    color: #777;
+  }
+  

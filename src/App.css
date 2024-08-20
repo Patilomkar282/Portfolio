@@ -1,0 +1,37 @@
+/* src/App.css */
+
+/* Default light theme */
+.app.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.app.light .navbar {
+  background-color: #f0f0f0;
+}
+
+.app.light .navbar-link {
+  color: #000000;
+}
+
+/* Dark theme */
+.app.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.app.dark .navbar {
+  background-color: #1e1e1e;
+}
+
+.app.dark .navbar-link {
+  color: #ffffff;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
