@@ -9,7 +9,7 @@ const Home = () => {
     <div className="home-container" id='home'>
       <div className="profile">
         <div className='profile-image'>
-        <img src="https://img.freepik.com/premium-photo/3d-rendered-illustration-young-office-worker-with-laptop-computer_1057-40745.jpg?w=360"  />
+        <img alt='home' src="https://img.freepik.com/premium-photo/3d-rendered-illustration-young-office-worker-with-laptop-computer_1057-40745.jpg?w=360"  />
 
         </div>
      
