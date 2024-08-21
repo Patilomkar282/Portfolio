@@ -1,87 +1,69 @@
 import React, { useState } from 'react';
-import './ContactForm.css'; // Link to your CSS file
+import './ContactForm.css';
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
+function ContactForm() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, message } = formData;
+    setStatus(''); // Clear any previous status
 
     try {
-      const response = await fetch('http://localhost:5000/send-mail', { // Replace with your backend endpoint
+      const response = await fetch('http://localhost:5000/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify(formData),
       });
+
+      const result = await response.text(); // Get the response text
 
       if (response.ok) {
         setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
       } else {
-        setStatus('Failed to send message.');
+        setStatus(`Failed to send message: ${result}`);
       }
     } catch (error) {
-      setStatus('Error: ' + error.message);
+      setStatus(`Failed to send message: ${error.message}`);
     }
   };
 
   return (
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit} id="contact-form">
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-
-        <label htmlFor="message">Message:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          rows="4"
-          required
-        ></textarea>
-
-        <button type="submit">Send</button>
-        {status && <p>{status}</p>}
-      </form>
-    </section>
+    <form onSubmit={handleSubmit} id='contact'>
+      <h1>Connect Me</h1>
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        value={formData.message}
+        onChange={handleChange}
+        required
+      />
+      <button type="submit">Send</button>
+      {status && <p>{status}</p>}
+    </form>
   );
-};
+}
 
 export default ContactForm;
-

@@ -10,10 +10,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
-  service: 'Gmail', // You can use other email services
+  service: 'gmail', // You can use other email services
   auth: {
     user: 'Patilomkar2820@gmail.com',
-    pass: 'patilo@282',
+    pass: 'yrnd ufzt oigv tlsl ',
   },
 });
 

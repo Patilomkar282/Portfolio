@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       
-    <div className="home-container">
+    <div className="home-container" id='home'>
       <div className="profile">
         <div className='profile-image'>
         <img src="https://img.freepik.com/premium-photo/3d-rendered-illustration-young-office-worker-with-laptop-computer_1057-40745.jpg?w=360"  />
@@ -23,7 +23,7 @@ const Home = () => {
           Here you'll find some of the projects I have worked on, 
           as well as information about me and how to get in touch.
           </p>
-          <a href='./about'><button className='aboutme'>AboutMe</button></a>
+          <a href='./about' ><button className='aboutme'>AboutMe</button></a>
         </div>
       </div>
     </div>

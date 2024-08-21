@@ -1,57 +1,66 @@
-/* CSS for the Contact Form section */
-#contact {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  #contact h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-  
-  #contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  #contact-form label {
-    font-weight: bold;
-  }
-  
-  #contact-form input,
-  #contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  #contact-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff; /* Blue background */
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  #contact-form button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
-  }
-  
-  #contact-form button:active {
-    background-color: #00408a; /* Even darker blue when clicked */
-  }
-  
-  #contact-form p {
-    text-align: center;
-    color: #007bff;
-    margin-top: 10px;
-  }
-  
+form {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-top: -10px;
+}
+
+p.success {
+  color: #28a745;
+}
+
+p.error {
+  color: #dc3545;
+}

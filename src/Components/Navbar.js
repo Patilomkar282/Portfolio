@@ -1,60 +1,56 @@
-// src/components/Navbar.js
-
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faFolderOpen, faEnvelope, faBriefcase, faSun, faMoon,faFileAlt  } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faFolderOpen, faEnvelope, faBriefcase, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
 import './Navbar.css'; // Optional: for custom styling
 
 const Navbar = ({ theme, toggleTheme }) => {
   return (
     <nav className={`navbar ${theme}`}>
       <div className="navbar-left">
-        <Link to="/" className="navbar-brand">
+        <a href="#home" className="navbar-brand">
           <FontAwesomeIcon icon={faBriefcase} className="navbar-icon brand-icon" />
           <span className="brand-text">Portfolio</span>
-        </Link>
+        </a>
       </div>
       <ul className="navbar-list">
-  <li className="navbar-item">
-    <Link to="/" className="navbar-link">
-      <FontAwesomeIcon icon={faHome} className="navbar-icon" />
-      <span className="navbar-text">Home</span>
-    </Link>
-  </li>
-  <li className="navbar-item">
-    <Link to="/about" className="navbar-link">
-      <FontAwesomeIcon icon={faUser} className="navbar-icon" />
-      <span className="navbar-text">About Me</span>
-    </Link>
-  </li>
-  <li className="navbar-item">
-    <Link to="/projects" className="navbar-link">
-      <FontAwesomeIcon icon={faFolderOpen} className="navbar-icon" />
-      <span className="navbar-text">Projects</span>
-    </Link>
-  </li>
- 
-  <li className="navbar-item">
-    <Link to="/contact" className="navbar-link">
-      <FontAwesomeIcon icon={faEnvelope} className="navbar-icon" />
-      <span className="navbar-text">Contact</span>
-    </Link>
-  </li>
-</ul>
+        <li className="navbar-item">
+          <a href="#home" className="navbar-link">
+            <FontAwesomeIcon icon={faHome} className="navbar-icon" />
+            <span className="navbar-text">Home</span>
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a href="#about" className="navbar-link">
+            <FontAwesomeIcon icon={faUser} className="navbar-icon" />
+            <span className="navbar-text">About Me</span>
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a href="#projects" className="navbar-link">
+            <FontAwesomeIcon icon={faFolderOpen} className="navbar-icon" />
+            <span className="navbar-text">Projects</span>
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a href="#contact" className="navbar-link">
+            <FontAwesomeIcon icon={faEnvelope} className="navbar-icon" />
+            <span className="navbar-text">Contact</span>
+          </a>
+        </li>
+      </ul>
 
       <div className="social-media">
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon">
+        <a href="https://www.linkedin.com/in/omkar-patil-373303224/" target="_blank" rel="noopener noreferrer" className="social-icon">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
-        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon">
+        <a href="https://github.com/Patilomkar282" target="_blank" rel="noopener noreferrer" className="social-icon">
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="mailto:your-email@gmail.com" className="social-icon">
+        <a href="mailto:Patilomkar28202gmail.com" className="social-icon">
           <FontAwesomeIcon icon={faGoogle} />
         </a>
-        <button className="theme-toggle" onClick={toggleTheme}  style={{padding:'10px 15px'}}>
+        <button className="theme-toggle" onClick={toggleTheme} style={{ padding: '10px 15px' }}>
           <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} />
         </button>
       </div>
