@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; 
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import ContactForm from './Contact';
 import './Projects.css'; // CSS file for styling
 
 const Projects = () => {
@@ -38,14 +39,8 @@ const Projects = () => {
       imageUrl: './todo.jpg',
       liveDemoLink: 'https://main--actionsandtask.netlify.app/',
       githubLink: 'https://github.com/Patilomkar282/To-Do-Application',
-    },
-    {
-      id: 2,
-      title: 'Mini Project 2',
-      description: 'Description of mini project 2',
-      imageUrl: 'https://via.placeholder.com/150',
-      githubLink: 'https://github.com/yourusername/mini-project-2',
-    },
+    }
+   
   ]);
 
   return (
@@ -87,6 +82,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <ContactForm/>
     </div>
   );
 };

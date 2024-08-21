@@ -1,4 +1,5 @@
 import React from 'react';
+import About from './About.js';
 import './Home.css'; // Optional: for custom styling
 
 const Home = () => {
@@ -22,12 +23,13 @@ const Home = () => {
           Here you'll find some of the projects I have worked on, 
           as well as information about me and how to get in touch.
           </p>
+          <a href='./about'><button className='aboutme'>AboutMe</button></a>
         </div>
       </div>
     </div>
     
     
-    
+    <About/>
     </>
   
   );

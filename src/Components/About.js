@@ -1,6 +1,8 @@
 import React from 'react';
 import './About.css'; // Import the CSS for styling
+
 import Skills from './Skills';
+import Projects from './Projects';
 import Education from './Education';
 
 const AboutMe = () => {
@@ -20,6 +22,7 @@ const AboutMe = () => {
     </div>
           <Skills/>
           <Education/>
+          <Projects/>
     
     
     </>

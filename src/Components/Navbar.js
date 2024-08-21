@@ -35,12 +35,7 @@ const Navbar = ({ theme, toggleTheme }) => {
       <span className="navbar-text">Projects</span>
     </Link>
   </li>
-  <li className="navbar-item">
-    <Link to="/resume" className="navbar-link">
-      <FontAwesomeIcon icon={faFileAlt} className="navbar-icon" />
-      <span className="navbar-text">Resume</span>
-    </Link>
-  </li>
+ 
   <li className="navbar-item">
     <Link to="/contact" className="navbar-link">
       <FontAwesomeIcon icon={faEnvelope} className="navbar-icon" />

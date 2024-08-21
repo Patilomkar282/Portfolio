@@ -82,3 +82,13 @@
     transform: translateY(0);
   }
 }
+
+.aboutme {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #E63946; /* Red color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
