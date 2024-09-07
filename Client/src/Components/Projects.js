@@ -6,7 +6,7 @@ import ContactForm from './Contact';
 import './Projects.css'; // CSS file for styling
 
 const Projects = () => {
-  const [majorProjects, setMajorProjects] = useState([
+  const [majorProjects] = useState([
     {
       id: 1,
       title: 'SmartStock',
@@ -31,7 +31,7 @@ const Projects = () => {
     },
   ]);
 
-  const [miniProjects, setMiniProjects] = useState([
+  const [miniProjects] = useState([
     {
       id: 1,
       title: 'To Do Application',
